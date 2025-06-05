@@ -1,7 +1,8 @@
-import controller.ProdutoController;
+import View.ProdutoView;
 
 public class Main {
     public static void main(String[] args) {
-        new ProdutoController();
+        // Cria o controlador, que inicia a interface
+        new ProdutoView();
     }
 }
