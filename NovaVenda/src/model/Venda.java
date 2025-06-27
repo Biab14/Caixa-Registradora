@@ -1,6 +1,6 @@
 package model;
 
-//Model de Vendas com interface Swing
+//Model de Vendas com interface Swing!
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

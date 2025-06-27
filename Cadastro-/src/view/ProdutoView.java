@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-//View do Cadastro de produtos com interface Swing
+//View do Cadastro de produtos com interface Swing!
 public class ProdutoView extends JFrame {
     private JTextField codigoField = new JTextField(10);
     private JTextField nomeField = new JTextField(10);

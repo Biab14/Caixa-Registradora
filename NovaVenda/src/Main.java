@@ -3,7 +3,7 @@ import view.CaixaView;
 import javax.swing.SwingUtilities;
 
 
-//Interface integrada das duas pastas!
+//Interface integrada das duas pastas
 public class Main {
     public static void main(String[] args) {
         // Garante que a interface gráfica seja criada na thread correta

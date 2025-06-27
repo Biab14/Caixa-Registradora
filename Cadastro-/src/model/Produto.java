@@ -1,6 +1,6 @@
 package model;
 
-//Model do Cadastro de produtos com interface Swing
+//Model do Cadastro de produtos com interface Swing!
 public class Produto {
     // Atributos privados
     private int codigo;

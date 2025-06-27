@@ -1,5 +1,5 @@
 package model;
-//Model de Vendas com interface Swing
+//Model de Vendas com interface Swing!
 public class ItemVenda {
         private Produto produto;
         private int quantidade;
