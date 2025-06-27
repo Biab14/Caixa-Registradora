@@ -7,7 +7,7 @@ import view.ProdutoView;
 import javax.swing.JOptionPane;
 import java.util.HashMap;
 import java.util.Map;
-//Controller de Vendas com interface Swing!
+//Controller de Vendas com interface Swing
 public class CaixaController {
     private final CaixaView view;
     private final Map<Integer, Produto> catalogo = new HashMap<>();

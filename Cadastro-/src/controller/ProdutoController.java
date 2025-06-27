@@ -15,7 +15,7 @@ public class ProdutoController {
         this.view.addListarListener(e -> listarProdutos());
         listarProdutos(); // Mostra a lista ao abrir
     }
-//Controller do cadastro com Interface Swing!
+//Controller do cadastro com Interface Swing
     private void cadastrarProduto() {
         try {
             int codigo = view.getCodigo();
