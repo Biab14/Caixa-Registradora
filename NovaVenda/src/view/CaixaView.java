@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
+//View de Vendas com interface Swing
 public class CaixaView extends JFrame {
     private JButton btnGerenciarProdutos = new JButton("Gerenciar Produtos");
     private JButton btnIniciarVenda = new JButton("Iniciar Nova Venda");
