@@ -3,7 +3,6 @@ package controller;
 import model.*;
 import view.CaixaView;
 import view.ProdutoView;
-// Importação existente para NotaFiscalGenerator
 
 import javax.swing.JOptionPane;
 import java.util.HashMap;
@@ -11,7 +10,7 @@ import java.util.Map;
 import java.io.File; // Importado para lidar com diretórios
 import java.time.format.DateTimeFormatter; // Importado para formatar a data/hora para o nome do arquivo
 
-//Controller de Vendas com interface Swing!
+//Controller de Vendas com interface Swing
 public class CaixaController {
     private final CaixaView view;
     private final Map<Integer, Produto> catalogo = new HashMap<>();
@@ -118,6 +117,8 @@ public class CaixaController {
             // --- FIM DO CÓDIGO PARA GERAÇÃO DA NOTA FISCAL ---
 
             iniciarNovaVenda(); // Inicia uma nova venda
+            view.mostrarMensagem(String.format("Venda Finalizada!\nTroco: R$ %.2f", troco));
+            iniciarNovaVenda();
 
         } catch (Exception ex) {
             view.mostrarMensagem("Pagamento cancelado ou valor inválido.");
