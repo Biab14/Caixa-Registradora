@@ -103,10 +103,10 @@ public class CaixaController {
                     this.vendaAtual.getIdVenda(), // Usa o getIdVenda() da sua Venda
                     this.vendaAtual.getDataHora().format(fileNameFormatter));
 
-            boolean gerouNota = NotaFiscalGenerator.gerarNotaFiscal(this.vendaAtual, nomeArquivo);
-
             double troco = valRecebido - total;
             String mensagemFinal = String.format("Venda Finalizada!\nTroco: R$ %.2f", troco);
+
+            boolean gerouNota = NotaFiscalGenerator.gerarNotaFiscal(this.vendaAtual, nomeArquivo, troco);
 
             if (gerouNota) {
                 mensagemFinal += String.format("\nNota fiscal gerada em: %s", nomeArquivo);
