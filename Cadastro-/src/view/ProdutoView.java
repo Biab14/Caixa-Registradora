@@ -12,6 +12,7 @@ public class ProdutoView extends JFrame {
     private JTextField quantidadeField = new JTextField(10);
     private JButton cadastrarButton = new JButton("Cadastrar");
     private JButton listarButton = new JButton("Listar Produtos");
+    private JButton excluirButton = new JButton("Excluir Produto");
     private JTextArea areaTexto = new JTextArea(10, 30);
 
     public ProdutoView() {
@@ -30,6 +31,7 @@ public class ProdutoView extends JFrame {
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(cadastrarButton);
         buttonPanel.add(listarButton);
+        buttonPanel.add(excluirButton);
 
         areaTexto.setEditable(false);
         JScrollPane scroll = new JScrollPane(areaTexto);
@@ -57,6 +59,7 @@ public class ProdutoView extends JFrame {
 
     public void addCadastrarListener(ActionListener listener) { cadastrarButton.addActionListener(listener); }
     public void addListarListener(ActionListener listener) { listarButton.addActionListener(listener); }
+    public void addExcluirListener(ActionListener listener) { excluirButton.addActionListener(listener); }
     public void exibirMensagem(String mensagem) { JOptionPane.showMessageDialog(this, mensagem); }
     public void mostrarLista(String texto) { areaTexto.setText(texto); }
 }

@@ -13,6 +13,7 @@ public class ProdutoController {
         this.catalogo = catalogo;
         this.view.addCadastrarListener(e -> cadastrarProduto());
         this.view.addListarListener(e -> listarProdutos());
+        this.view.addExcluirListener(e -> excluirProduto());
         listarProdutos(); // Mostra a lista ao abrir
     }
 //Controller do cadastro com Interface Swing
@@ -43,5 +44,26 @@ public class ProdutoController {
             lista.append(p.toString()).append("\n");
         }
         view.mostrarLista(lista.toString());
+    }
+    private void excluirProduto() {
+        try {
+            // Pega o código do campo de texto da view
+            int codigo = view.getCodigo();
+
+            // Verifica se o produto com este código existe no catálogo
+            if (catalogo.containsKey(codigo)) {
+                // Remove o produto do mapa usando a chave (código)
+                catalogo.remove(codigo);
+                view.exibirMensagem("Produto excluído com sucesso!");
+                view.limparCampos(); // Limpa os campos após a exclusão
+                listarProdutos();   // Atualiza a lista na tela
+            } else {
+                // Se não existir, informa ao usuário
+                view.exibirMensagem("Erro: Produto com o código informado não encontrado.");
+            }
+        } catch (NumberFormatException ex) {
+            // Trata o caso do usuário digitar algo que não é um número no campo de código
+            view.exibirMensagem("Erro: Por favor, insira um código válido para excluir.");
+        }
     }
 }
